@@ -181,7 +181,7 @@ These examples illustrate some of the powerful capabilities of the java.util.str
 
 Let's delve into some more advanced topics related to java.util.stream in Java.
 
-## 1. FlatMap for Nested Collections:
+## 1. FlatMap for Nested Collections
 
 If you have a stream of collections and you want to flatten them into a single stream, you can use flatMap. 
 
@@ -211,7 +211,7 @@ public class StreamExample {
 
 Here, flatMap(List::stream) transforms each list in the stream into a stream of its elements, and then flattens these streams into a single stream of integers.
 
-## 2. Parallel Streams:
+## 2. Parallel Streams
 
 Java streams can easily be parallelized to take advantage of multi-core processors. 
 
@@ -237,14 +237,13 @@ However, keep in mind that not all operations are suitable for parallelization, 
 
 It's crucial to test and profile your application to ensure that parallelization provides a performance benefit.
 
-## 3. Custom Collectors:
+## 3. Custom Collectors
 
 You can create your own custom collectors using the Collector interface. 
 
 This is useful when you want to perform a custom reduction operation or combine the elements in a specific way:
 
-java
-Copy code
+```java
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collector;
@@ -266,13 +265,19 @@ class CustomCollectors {
         return Collectors.joining(delimiter);
     }
 }
+```
+
 In this example, a custom collector named CustomCollectors.joining is created to join elements with a custom delimiter.
 
-4. Infinite Streams:
-Streams can be infinite, meaning they have no fixed size. You can create infinite streams using methods like Stream.iterate or Stream.generate. Be cautious when working with infinite streams to avoid infinite loops:
+## 4. Infinite Streams
 
-java
-Copy code
+Streams can be infinite, meaning they have no fixed size. 
+
+You can create infinite streams using methods like Stream.iterate or Stream.generate. 
+
+Be cautious when working with infinite streams to avoid infinite loops:
+
+```java
 import java.util.stream.Stream;
 
 public class StreamExample {
@@ -283,7 +288,10 @@ public class StreamExample {
               .forEach(System.out::println);
     }
 }
+```
+
 In this example, Stream.iterate(0, n -> n + 2) generates an infinite stream of even numbers starting from 0.
 
-These advanced topics showcase the flexibility and power of the java.util.stream package in Java. Experimenting with these features can lead to more concise and expressive code when working with collections.
+These advanced topics showcase the flexibility and power of the java.util.stream package in Java. 
 
+Experimenting with these features can lead to more concise and expressive code when working with collections.
