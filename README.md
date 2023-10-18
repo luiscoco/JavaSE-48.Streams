@@ -58,7 +58,7 @@ Suppose you want to find the sum of all numbers in the list:
 import java.util.Arrays;
 import java.util.List;
 
-public class StreamExample {
+public class StreamExampleReducing {
     public static void main(String[] args) {
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
 
@@ -85,7 +85,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.OptionalDouble;
 
-public class StreamExample {
+public class StreamExampleFinding {
     public static void main(String[] args) {
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
 
@@ -112,7 +112,7 @@ Filtering and limiting the number of elements in a stream:
 import java.util.Arrays;
 import java.util.List;
 
-public class StreamExample {
+public class StreamExampleFilteringAndLimiting {
     public static void main(String[] args) {
         List<String> words = Arrays.asList("apple", "banana", "orange", "grape", "watermelon");
 
@@ -156,7 +156,7 @@ class Person {
     }
 }
 
-public class StreamExample {
+public class StreamExampleGroupingByProperty {
     public static void main(String[] args) {
         List<Person> people = Arrays.asList(
                 new Person("Alice", 25),
@@ -192,7 +192,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class StreamExample {
+public class StreamExampleFlatMap {
     public static void main(String[] args) {
         List<List<Integer>> nestedNumbers = Arrays.asList(
                 Arrays.asList(1, 2, 3),
@@ -220,7 +220,7 @@ You can convert a sequential stream to a parallel stream using the parallel() me
 ```java
 import java.util.Arrays;
 
-public class StreamExample {
+public class StreamExampleParallel {
     public static void main(String[] args) {
         int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
@@ -249,7 +249,7 @@ import java.util.List;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-public class StreamExample {
+public class StreamExampleCustomCollectors {
     public static void main(String[] args) {
         List<String> words = Arrays.asList("apple", "banana", "orange", "grape", "watermelon");
 
@@ -280,7 +280,7 @@ Be cautious when working with infinite streams to avoid infinite loops:
 ```java
 import java.util.stream.Stream;
 
-public class StreamExample {
+public class StreamExampleInfinite {
     public static void main(String[] args) {
         // Generate an infinite stream of even numbers
         Stream.iterate(0, n -> n + 2)
