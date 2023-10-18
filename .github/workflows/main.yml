@@ -18,8 +18,7 @@ jobs:
 
     - name: Compile and Run Java Files
       run: |
-        javac StreamExampleFiltering.java
+        javac StreamExampleFiltering.java StreamExampleMapping.java
         java StreamExampleFiltering
-        javac StreamExampleMapping.java
         java StreamExampleMapping
         
