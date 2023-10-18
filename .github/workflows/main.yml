@@ -20,3 +20,6 @@ jobs:
       run: |
         javac StreamExampleFiltering.java
         java StreamExampleFiltering
+        javac StreamExampleMapping.java
+        java StreamExampleMapping
+        
